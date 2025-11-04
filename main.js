@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isPaused = !isPaused;
     });
     
-    audioControls.replay.addEventListener('click', ()_ => {
+    audioControls.replay.addEventListener('click', () => {
         voice.cancel();
         voice.speakScreen(stages[currentStage]);
     });
