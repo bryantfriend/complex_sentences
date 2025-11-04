@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mastering Complex Sentences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon-192.png"> </head>
+<body>
+
+    <div id="app-container">
+        <div id="audio-controls">
+            <button id="pause-speech-btn" class="control-btn" data-speakable="true" aria-label="Pause Speech">Pause Audio ⏸️</button>
+            <button id="replay-speech-btn" class="control-btn" data-speakable="true" aria-label="Replay Speech">Replay 🔄</button>
+        </div>
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <section id="stage-0" class="stage active">
+            <h1 class="title-animation" data-speakable="true">🎓 Mastering Complex Sentences</h1>
+            <h2 class="subtitle-animation" data-speakable="true">Advanced Grammar for Clarity</h2>
+            <p data-speakable="true">Welcome! Today we’ll explore how complex sentences make your English clear, powerful, and professional.</p>
+            <p data-speakable="true">We'll focus on three grammar pillars: Relative Clauses, Inversion, and Parallelism.</p>
+            <button id="start-btn" class="btn-primary" data-speakable="true" aria-label="Start Lesson">Start</button>
+        </section>
+
+        <section id="stage-1" class="stage">
+            <h2 data-speakable="true">1. Relative Clauses</h2>
+            <p data-speakable="true">A relative clause adds extra information about a noun. It often starts with <strong>who, which, that, where,</strong> or <strong>whose</strong>.</p>
+            <div class="example-box">
+                <p data-speakable="true">"The teacher <span class="highlight-word" data-interactive="true" data-correct="true">who</span> inspires her students works at our school."</p>
+                <p data-speakable="true">"Finland is a country <span class="highlight-word" data-interactive="true" data-correct="true">where</span> education is highly valued."</p>
+            </div>
+            <p data-speakable="true"><strong>Tap the word</strong> that connects the ideas.</p>
+            <div id="feedback-stage-1" class="feedback"></div>
+        </section>
+
+        <section id="stage-2" class="stage">
+            <h2 data-speakable="true">Practice: Combine the Sentences</h2>
+            <p data-speakable="true">Drag the correct relative pronoun onto the blue line to combine the sentences.</p>
+            <div id="rc-practice-area">
+                <div class="sentence-pair">
+                    <p data-speakable="true">I met a teacher.</p>
+                    <div id="rc-drop-1" class="drop-zone" data-correct-word="who"></div>
+                    <p data-speakable="true">She studied in Japan.</p>
+                </div>
+                <p id="rc-combined-1" class="combined-sentence" data-speakable="true">"I met a teacher who studied in Japan."</p>
+            </div>
+            <div class="drag-options">
+                <div class="word-chip" draggable="true" data-word="who">who</div>
+                <div class="word-chip" draggable="true" data-word="which">which</div>
+                <div class="word-chip" draggable="true" data-word="where">where</div>
+            </div>
+            <div id="feedback-stage-2" class="feedback"></div>
+        </section>
+
+        <section id="stage-3" class="stage">
+            <h2 data-speakable="true">2. Inversion for Emphasis</h2>
+            <p data-speakable="true">Inversion changes word order for emphasis. We use it in formal or emotional writing.</p>
+            <div class="example-box transformation">
+                <p class="before" data-speakable="true">"I have never heard such an inspiring story."</p>
+                <p class="arrow">↓</p>
+                <p class="after" data-speakable="true">"<strong>Never have I heard</strong> such an inspiring story."</p>
+            </div>
+            <div class="example-box transformation">
+                <p class="before" data-speakable="true">"We rarely face discipline issues."</p>
+                <p class="arrow">↓</p>
+                <p class="after" data-speakable="true">"<strong>Rarely do we face</strong> discipline issues."</p>
+            </div>
+            <p data-speakable="true">Which version sounds more formal and powerful?</p>
+        </section>
+
+        <section id="stage-4" class="stage">
+            <h2 data-speakable="true">Practice: Reorder the Sentence</h2>
+            <p data-speakable="true">Drag the words into the correct order to create an emphatic sentence using inversion.</p>
+            <div id="inv-dropzone" class="drop-zone reorder-zone" data-correct-answer="Rarely do we face discipline issues .">
+                </div>
+            <div id="inv-drag-options" class="drag-options">
+                <div class="word-chip" draggable="true">do</div>
+                <div class="word-chip" draggable="true">Rarely</div>
+                <div class="word-chip" draggable="true">face</div>
+                <div class="word-chip" draggable="true">discipline</div>
+                <div class="word-chip" draggable="true">issues</div>
+                <div class="word-chip" draggable="true">we</div>
+                <div class="word-chip" draggable="true">.</div>
+            </div>
+            <button id="check-inversion-btn" class="btn-secondary" data-speakable="true" aria-label="Check Answer">Check Order</button>
+            <div id="feedback-stage-4" class="feedback"></div>
+        </section>
+
+        <section id="stage-5" class="stage">
+            <h2 data-speakable="true">3. Parallelism: Rhythm and Balance</h2>
+            <p data-speakable="true">Parallelism means using the same grammatical structure for ideas of equal importance. Notice how balanced it feels?</p>
+            <div class="example-box">
+                <h3 data-speakable="true">Broken:</h3>
+                <p data-speakable="true">"Our goals are inspiring teachers, to motivate students, and innovation."</p>
+                <h3 data-speakable="true">Parallel (Fixed):</h3>
+                <p class="parallel-example" data-speakable="true">
+                    "Our goals are 
+                    <span class="parallel-item">to inspire teachers,</span> 
+                    <span class="parallel-item">to motivate students,</span> 
+                    <span class="parallel-item">and to innovate learning.</span>"
+                </p>
+            </div>
+        </section>
+
+        <section id="stage-6" class="stage">
+            <h2 data-speakable="true">Application: Build Your Mission</h2>
+            <p data-speakable="true">Combine your new skills. Choose phrases to build a powerful mission statement for your school.</p>
+            
+            <div id="mission-builder">
+                <select id="select-inversion" class="mission-select" data-rule="inversion">
+                    <option value="">[Choose an opening...]</option>
+                    <option value="Rarely have I seen" data-speakable="true">Rarely have I seen...</option>
+                    <option value="Only after hard work" data-speakable="true">Only after hard work...</option>
+                    <option value="Our school is" data-speakable="true">(No inversion)</option>
+                </select>
+                
+                <select id="select-relative" class="mission-select" data-rule="relative">
+                    <option value="">[Choose a relative clause...]</option>
+                    <option value="such dedicated teachers, who truly care" data-speakable="true">...such dedicated teachers, who truly care...</option>
+                    <option value="a place where students thrive" data-speakable="true">...a place where students thrive...</option>
+                    <option value="dedicated staff" data-speakable="true">(No relative clause)</option>
+                </select>
+
+                <select id="select-parallel" class="mission-select" data-rule="parallel">
+                    <option value="">[Choose a parallel ending...]</option>
+                    <option value="about student growth and well-being." data-speakable="true">...about student growth and well-being.</option>
+                    <option value="by studying hard, playing fair, and helping others." data-speakable="true">...by studying hard, playing fair, and helping others.</option>
+                    <option value="and they are happy." data-speakable="true">(No parallelism)</option>
+                </select>
+            </div>
+
+            <button id="check-mission-btn" class="btn-primary" data-speakable="true" aria-label="Check My Mission">Check My Mission</button>
+            <div id="final-mission-output" class="feedback" data-speakable="true"></div>
+            <div id="mission-feedback" class="feedback"></div>
+        </section>
+
+        <section id="stage-7" class="stage">
+            <h2 data-speakable="true">Excellent Work!</h2>
+            <p data-speakable="true">You’ve mastered complex sentences. Clarity and rhythm are your superpowers!</p>
+            <div id="confetti-container"></div>
+            
+            <div class="reflection-box">
+                <h3 data-speakable="true">Reflection</h3>
+                <p data-speakable="true">Which structure felt most natural for you? When might you use these in a report or speech?</p>
+                
+                <h3 data-speakable="true">Homework 📝</h3>
+                <p data-speakable="true">Write a 100-word paragraph about your leadership philosophy using all three structures.</p>
+                <textarea id="homework-input" placeholder="Type your paragraph here..."></textarea>
+                <button id="record-btn" class="btn-secondary" data-speakable="true" aria-label="Record your answer">Record Answer 🎤</button>
+                <p id="record-status" class="feedback"></p>
+            </div>
+
+            <div class="final-nav">
+                <button id="replay-btn" class="btn-primary" data-speakable="true" aria-label="Replay Lesson">Replay Lesson 🔁</button>
+                <button id="homework-btn" class="btn-secondary" data-speakable="true" aria-label="Go to Homework">Save Homework 💾</button>
+            </div>
+        </section>
+
+        <nav id="app-navigation">
+            <button id="back-btn" class="nav-btn" data-speakable="true" aria-label="Back">Back</button>
+            <button id="next-btn" class="nav-btn" data-speakable="true" aria-label="Next">Next</button>
+        </nav>
+
+    </div>
+
+    <script src="voice.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
