@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app-container');
     const audioControls = {
         pause: document.getElementById('pause-speech-btn'),
-        replay: document.getElementById('replay-speech-btn'),
+        replay: document.getElementById('replay-speech-btn')
     };
     
     let currentStage = 0;
